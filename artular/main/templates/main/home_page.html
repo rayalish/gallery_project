@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    {% for artwork in artworks %}
+        {{ artwork.name }}
+        {{ artwork.size }}
+        {{ artwork.materials }}
+        <img src="{{ artwork.painting.url }}" alt="" class="rounded img-fluid mx-auto d-block">
+        {{ artwork.author }}
+    {% endfor %}
+</body>
+</html>
